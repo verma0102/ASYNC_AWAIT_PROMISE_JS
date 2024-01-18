@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async_await_promise</title>
+</head>
+<body>
+    <script>
+        let data=[
+            {name:"Pappu singh",designation:" Mern stack devloper"},
+            {name:"Rupesh singh",designation:" software devloper"},
+            {name:"Golu singh",designation:"devloper"},
+        ];
+         
+        function getData(){
+               let output="";
+               data.forEach((da,index)=>{
+                    output+=`<li>${da.name}</li>`;
+                
+
+               },1000);
+              document.body.innerHTML=output                                              
+        }
+        getData();
+
+    </script>
+</body>
+</html>
