@@ -10,7 +10,7 @@
         let arr=[
               {name:"Pappu",age:22,address:"New delhi"},
               {name:"Vinay",age:23,address:"Delhi"},
-              {name:"Arjun",age:25,address:"Patna"}
+              {name:"Arjun",age:23,address:"Patna"}
         ];
 // first  
  for(let i=0; i<=arr.length; i++){
@@ -33,13 +33,29 @@ for(let i=0; i<age.length; i++){
     }
    
 }
-//second
+//Filter
 const ages=age.filter((d)=>d>21);
 console.log(ages);
+//Filter
 
-//Third
+const app=arr.filter(add=>add.address==="Delhi");
+console.log(app);
+//Map 
+const app2=arr.map((age,index)=>{
+    return `${age.name} ${age.age} ${age.address}`;  
+});
+console.log(app2);
 
+// sort
+let sorted=arr.sort((c1,c2)=>{
+    if(c1.name>c2.name){
+        return 1;
+    }else{
+        return -1;
+    }
+})
 
+console.log(sorted);
 
   </script>
 </body>
