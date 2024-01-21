@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,18 +11,28 @@
             {name:"Pappu singh",designation:" Mern stack devloper"},
             {name:"Rupesh singh",designation:" software devloper"},
             {name:"Golu singh",designation:"devloper"},
-        ];
-         
+        ];         
         function getData(){
                let output="";
                data.forEach((da,index)=>{
                     output+=`<li>${da.name}</li>`;
             
-               },1000);
+               },5000);
               document.body.innerHTML=output                                              
-        }
-        getData();
+        
+            }
 
+            function createdata(newdata){
+                setTimeout(()=>{
+                     data.push(newdata)
+                     getData();
+                },3000)
+            }
+           
+            createdata({name:"Akash singh",designation:"software devloper"}); 
+    
     </script>
 </body>
-</html>
+</html> 
+
+

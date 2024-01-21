@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map </title>
+</head>
+<body>
+    <script>
+        let arr=[
+              {name:"Pappu",age:22,address:"New delhi"},
+              {name:"Vinay",age:23,address:"Delhi"},
+              {name:"Arjun",age:25,address:"Patna"}
+        ];
+// first  
+ for(let i=0; i<=arr.length; i++){
+        console.log(arr[i]);   
+ }
+// second
+arr.forEach((da,index)=>{
+         console.log(arr);
+})
+
+//third
+arr.forEach((da,index)=>console.log(index,da));
+
+// Filter question
+let age=[10,20,21,5,7,15,36,47,57,30,40,50,60,70,80,90];
+// first    
+for(let i=0; i<age.length; i++){
+    if(age[i]<21){
+        console.log(age[i]);
+    }
+   
+}
+//second
+const ages=age.filter((d)=>d>21);
+console.log(ages);
+
+//Third
+
+
+
+  </script>
+</body>
+</html>
