@@ -10,7 +10,7 @@
     let user={
            name:"Pappu",
            age:22,
-           address:"delhi",
+           address:"Delhi",
            printDetails:function(){
              console.log(this.name);
            }
@@ -28,12 +28,12 @@
     let userDetails = {
       name: "Pappu",
       age: 22,
-      address: "delhi",
+      address: "Delhi",
     }
     printDetails = function (state, country) {
       console.log(this.name + " " + state + " " + country);
     }
-    printDetails.call(userDetails, "delhi", "India");
+    printDetails.call(userDetails, "Delhi", "India");
 
     let userDetails2 = {
       name: "Mantosh",
