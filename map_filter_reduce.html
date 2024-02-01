@@ -1,62 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map </title>
+    <title>arrayMap</title>
 </head>
+
 <body>
     <script>
-        let arr=[
-              {name:"Pappu",age:22,address:"New delhi"},
-              {name:"Vinay",age:23,address:"Delhi"},
-              {name:"Arjun",age:23,address:"Patna"}
+        let arr = [
+            { name: "Pappu", age: 22, address: "New delhi" },
+            { name: "Vinay", age: 23, address: "Delhi" },
+            { name: "Arjun", age: 23, address: "Patna" }
         ];
-// first  
- for(let i=0; i<=arr.length; i++){
-        console.log(arr[i]);   
- }
-// second
-arr.forEach((da,index)=>{
-         console.log(arr);
-})
+        // first  
+        for (let i = 0; i <= arr.length; i++) {
+            console.log(arr[i]);
+        }
 
-//third
-arr.forEach((da,index)=>console.log(index,da));
+        // second
+        arr.forEach((da, index) => {
+            console.log(arr);
+        })
 
-// Filter question
-let age=[10,20,21,5,7,15,36,47,57,30,40,50,60,70,80,90];
-// first    
-for(let i=0; i<age.length; i++){
-    if(age[i]<21){
-        console.log(age[i]);
-    }
-   
-}
-//Filter
-const ages=age.filter((d)=>d>21);
-console.log(ages);
-//Filter
+        //third
+        arr.forEach((da, index) => console.log(index, da));
 
-const app=arr.filter(add=>add.address==="Delhi");
-console.log(app);
-//Map 
-const app2=arr.map((age,index)=>{
-    return `${age.name} ${age.age} ${age.address}`;  
-});
-console.log(app2);
+        // Filter question
+        let age = [10, 20, 21, 5, 7, 15, 36, 47, 57, 30, 40, 50, 60, 70, 80, 90];
+        // first    
+        for (let i = 0; i < age.length; i++) {
+            if (age[i] > 40) {
+                console.log(age[i]);
+            }
 
-// sort
-let sorted=arr.sort((c1,c2)=>{
-    if(c1.name>c2.name){
-        return 1;
-    }else{
-        return -1;
-    }
-})
+        }
 
-console.log(sorted);
+        //Filter
+        const ages = age.filter((d) => d > 21);
+        console.log(ages);
 
-  </script>
+        //Filter
+        const app = arr.filter(add => add.address === "Delhi");
+        console.log(app);
+        //Map 
+        const app2 = arr.map((age, index) => {
+            return `${age.name} ${age.age} ${age.address}`;
+        });
+        console.log(app2);
+
+        // sort
+        let sorted = arr.sort((c1, c2) => {
+            if (c1.name > c2.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        })
+
+        console.log(sorted);
+
+        // Advance Map use 
+
+        const arr1 = [1, 4, 5, 7, 9];
+        const arr2 = arr1.map(i => i * i);
+        console.log(arr2);
+        // map
+        const arr3 = arr1.map(i => i + i);
+        console.log(arr3);
+        // reduce 
+        const arr4 = arr1.reduce((i, j) => {
+            return i + j;
+        })
+        console.log('totalSumNumber:', arr4);
+
+
+        // Filter
+        const arr7 = [1, 4, 5, 3, 2, 7, 8, 9, 10];
+        const arr8 = arr7.filter(i => i > 4);
+        console.log(arr8);
+        // Even
+        const arr9 = arr7.filter(i => i % 2 == 0);
+        console.log(arr9);
+        // Odd
+        const arr10 = arr7.filter(i => i % 2 == !0);
+        console.log(arr10);
+    </script>
 </body>
+
 </html>
