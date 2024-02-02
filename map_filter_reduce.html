@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arrayMap</title>
 </head>
-
+<div id="pappu"></div>
 <body>
     <script>
         let arr = [
@@ -74,8 +73,6 @@
             return i + j;
         })
         console.log('totalSumNumber:', arr4);
-
-
         // Filter
         const arr7 = [1, 4, 5, 3, 2, 7, 8, 9, 10];
         const arr8 = arr7.filter(i => i > 4);
@@ -86,7 +83,51 @@
         // Odd
         const arr10 = arr7.filter(i => i % 2 == !0);
         console.log(arr10);
+
+        //flat  
+        const flat = [10, 20, 30, [[40, 50]], 60, 70];
+        const flat2 = flat.flat();
+        console.log(flat2);
+
+        const flat3 = flat2.flat();
+        console.log(flat3);
+
+        // find
+        const find = [1, 3, 5, 7, 8, 9, 12, 16, 20];
+        const find2 = find.find(i => i > 7);
+        console.log("Find:", find2);
+
+        //findIndex
+        const findIndex = [4, 7, 10, 13, 15, 17, 20, 25, 27];
+        const findIndex2 = findIndex.findIndex(i => i > 20);
+        console.log("findIndex:", findIndex2);
+
+        //fill
+        const fill = [10, 12, 15, 17, 20, 25, 30, 35];
+        const fill2 = fill.fill("Pappu");
+        console.log(fill2);
+
+        //some
+        const some = [14, 16, 20, 23, 25, 27, 30];
+        const some2 = some.some(i => i % 2 == 0);
+        console.log(some2);
+        //every
+        const every = [20, 22, 24, 30, 32, 34, 17, 19, 23, 37];
+        const every2 = every.every(i => i % 2 == 0);
+        console.log(every2);
+
+        const every3 = every.every(i => i % 2 == !0);
+        console.log(every3);
+
+        //forEach
+        const done = ["sun", "mon", "tue", "wed", "thu", "fri", "don"];
+        done.forEach((i, j) => console.log("forEach use:", i, j))
+
+        //For in loop
+        const loop = ["sun", "mon", "tue", "wed", "thu", "fri", "don"];
+        for (let i of loop) {
+            console.log(loop[i]);
+        }
     </script>
 </body>
-
 </html>
